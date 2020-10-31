@@ -86,32 +86,16 @@ function writePassword() {
     password.push(randomChar);
   }
 
-  console.log(password);
+  console.log(password.join(""));
+  password = password.join("");
 }
 
-/*
+// Write password to HTML
 function generatePassword() {
-  var passwordText = password[];
-  var x = document.getElementById("demo");
-  x.innerHTML = fruits.join();
+  writePassword();
+  console.log("string",password);
+  document.querySelector("#password").innerHTML = password;
 }
-
-function generatePassword() {
-  document.write(password.join(""));
-  document.querySelector("#password").textarea.innerHTML = password;
-}
-
-//console.log(password.join(""));
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-*/
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
